@@ -4,16 +4,17 @@
 
 // Add Event Listeners here:
 function addHover (event) {
-  $('.cell').hover(event => {
+
+  $('.grid').on('mouseover', '.cell', event => {
     $(event.target).addClass('active');
+    console.log(event);
   });
 }
 
 function addRedraw (event){
   $('button').click(event =>{
-    console.log('I\'ve been clicked!');
     createAndPlaceRows(8);
-    addHover(event);
+    // addHover(event);
   });  
 }
 
